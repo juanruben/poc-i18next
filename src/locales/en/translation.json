@@ -1,0 +1,14 @@
+{
+  "title": "welcome",
+  "Add": {
+    "Info": "",
+    "ClickTheButtonBelowToAddTasks": "",
+    "TaskPlaceholder": "",
+    "Cancel": "",
+    "Add": ""
+  },
+  "Main": {
+    "TitleToDoList": "",
+    "ToDoList": ""
+  }
+}
