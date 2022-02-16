@@ -22,12 +22,6 @@ module.exports = {
     lngs: ['en', 'de'],
     defaultLng: 'en',
     defaultNs: 'translation',
-    defaultValue: (lng, ns, key) => {
-      if (lng === 'en') {
-        return key; // Use key as value for base language
-      }
-      return key; // Return empty string for other languages
-    },
     resource: {
       loadPath: 'src/locales/{{lng}}/{{ns}}.json',
       savePath: 'src/locales/{{lng}}/{{ns}}.json',
@@ -55,7 +49,6 @@ module.exports = {
   },
 };
 function parseContent(content, parser, shouldStringfyObjects = true) {
-  console.log(`Parsing file: file=${JSON.stringify(content.relative)}`);
   const { outputText } = typescript.transpileModule(content, {
     compilerOptions: compilerOptions,
   });

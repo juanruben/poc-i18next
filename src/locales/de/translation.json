@@ -1,15 +1,18 @@
 {
   "Add": {
-    "Info": "",
+    "Info": "Default Add Info",
     "ClickTheButtonBelowToAddTasks": "",
-    "AddTask": "",
-    "AddYourDailyTasks": "",
+    "AddTask": "Default Add Task",
+    "AddYourDailyTasks": "Default Add Your Daily Tasks",
     "TaskPlaceholder": "",
     "Cancel": "",
     "Add": ""
   },
   "Main": {
-    "TitleToDoList": "",
-    "ToDoList": ""
-  }
+    "TitleToDoList": "Default Main Title ToDo List",
+    "ToDoList": "Default Title"
+  },
+  "intlNumber": "",
+  "intlNumberWithOptions": "",
+  "intlDateTime": ""
 }

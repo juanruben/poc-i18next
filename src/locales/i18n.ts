@@ -23,6 +23,9 @@ export const i18n = i18next
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
+    detection: {
+      lookupCookie: 'locale',
+    },
     resources: translationsJson,
     fallbackLng: 'en',
     debug:

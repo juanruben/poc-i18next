@@ -1,14 +1,18 @@
 {
-  "title": "welcome",
   "Add": {
-    "Info": "",
+    "Info": "Default Add Info",
     "ClickTheButtonBelowToAddTasks": "",
+    "AddTask": "Default Add Task",
+    "AddYourDailyTasks": "Default Add Your Daily Tasks",
     "TaskPlaceholder": "",
     "Cancel": "",
     "Add": ""
   },
   "Main": {
-    "TitleToDoList": "",
-    "ToDoList": ""
-  }
+    "TitleToDoList": "Default Main Title ToDo List",
+    "ToDoList": "Default Title"
+  },
+  "intlNumber": "Some {{val, number}}",
+  "intlNumberWithOptions": "Some {{val, number(minimumFractionDigits: 2)}}",
+  "intlDateTime": "{{val, datetime}}"
 }

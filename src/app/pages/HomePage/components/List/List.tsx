@@ -23,16 +23,12 @@ export default function List(props) {
   const dialogState = useSelector(selectDialogCondition);
   const task = useSelector(selectTask);
 
-  const tWrapper = (id: string, defaultMessage?: string): string => {
-    return t(id) || defaultMessage;
-  };
-
   return (
     <>
       <StylesProvider injectFirst>
         {props.item.length === 0 ? (
           <Alert severity="info">
-            <AlertTitle>{t('Add.Info')}</AlertTitle>
+            <AlertTitle>{t('Add.Info', 'Default Add Info')}</AlertTitle>
             {t('Add.ClickTheButtonBelowToAddTasks')}
           </Alert>
         ) : (
@@ -59,11 +55,11 @@ export default function List(props) {
         }}
       >
         <DialogTitle id="form-dialog-title">
-          {tWrapper('Add.AddTask', 'Add Task')}
+          {t('Add.AddTask', 'Default Add Task')}
         </DialogTitle>
         <DialogContent>
           <DialogContentText>
-            {tWrapper('Add.AddYourDailyTasks')}
+            {t('Add.AddYourDailyTasks', 'Default Add Your Daily Tasks')}
           </DialogContentText>
           <TextField
             onKeyPress={e => {

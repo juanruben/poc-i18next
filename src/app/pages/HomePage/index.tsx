@@ -34,7 +34,7 @@ export function HomePage(props) {
       console.log('Calling get data');
       console.log('No params');
     }
-  }, []);
+  }, [actions, dispatch, props.match.params]);
 
   const updateDialogState = useSelector(selectUpdateDialogCondition);
   const info = useSelector(selectInfo);
@@ -71,13 +71,31 @@ export function HomePage(props) {
     dispatch(actions.closeUpdate());
   }
 
+  const date = new Date();
+
   return (
     <>
       <Helmet>
-        <title>{t('Main.TitleToDoList')}</title>
+        <title>{t('Main.TitleToDoList', 'Default Main Title ToDo List')}</title>
         <meta name="description" content="A Boilerplate application homepage" />
       </Helmet>
-      <h1 className="heading">{t('Main.ToDoList')}</h1>
+      <h1 className="heading">{t('Main.ToDoList', 'Default Title')}</h1>
+      <div className="heading">
+        {t('intlNumberWithOptions', { val: 2000, minimumFractionDigits: 3 })}
+      </div>
+      <div className="heading">
+        {t('intlDateTime', {
+          val: date,
+          formatParams: {
+            val: {
+              weekday: 'long',
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            },
+          },
+        })}
+      </div>
       <List
         onAdd={task => {
           onAdd(task);
